@@ -24,3 +24,8 @@ function add(a, b) {
 //call a function
 console.log(add(1, 2)); // 3
 console.log(sum(1, 2)); // 3
+
+let add1 = function () {
+  return 1 + 2;
+};
+add1();
