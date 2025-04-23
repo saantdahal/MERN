@@ -21,6 +21,6 @@ const obj1 = {
 const obj2 = {
   name: "Developer",
 };
-console.log(obj1 === obj2); // false because they are different objects in memory
-console.log(obj1 == obj2); // false because they are different objects in memory
+console.log(obj1 === obj2);
+console.log(obj1 == obj2);
 // Non prqimitive data types are compared by reference and primitive data types are compared by value
