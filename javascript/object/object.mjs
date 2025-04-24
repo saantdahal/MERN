@@ -1,5 +1,5 @@
 // Object in JavaScript
-let info = {
+/* let info = {
   name: "Shyam",
   age: 25,
   score: 90,
@@ -32,4 +32,12 @@ class Person {
 }
 // Creating an object of the Person class
 let person1 = new Person("Shyam", 25);
-person1.display();
+person1.display(); */
+let info = {
+  name: "Shyam",
+  age: 25,
+  score: 90,
+  name: "Harry",
+};
+
+console.log(info.name.toUpperCase()); // Harry because it will override the previous value of name. Duplicate keys are not allowed in object
