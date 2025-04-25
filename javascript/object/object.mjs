@@ -110,10 +110,17 @@ console.log(Object.keys(info));
 console.log(Object.values(info)); */
 
 // Convert Array into Object
-
+/* 
 let info = {
   name: "Ram",
   age: 50,
   address: "Kathmandu",
 };
 console.log(Object.entries(info)[2]);
+ */
+
+// Math in js
+
+//console.log(Math.random() * 10);
+console.log(Math.ceil(2.1));
+console.log(Math.floor(2.99));
