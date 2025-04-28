@@ -1,0 +1,5 @@
+Backend Framework: Express.js
+
+API: Application Programming Interface
+CRUD: Create, Read, Update, Delete
+Login Management
