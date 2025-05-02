@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-import studentSchema from "../schema/studentSchema";
+import studentSchema from "../schema/studentSchema.js";
 
-const Student = mongoose.model("Student", studentSchema);
-
-export { Student };
+export const studentModel = mongoose.model("Student", studentSchema);

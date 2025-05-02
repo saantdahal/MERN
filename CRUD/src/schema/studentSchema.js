@@ -1,4 +1,4 @@
-import { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const studentSchema = new mongoose.Schema({
   name: {
@@ -19,5 +19,4 @@ const studentSchema = new mongoose.Schema({
     required: true,
   },
 });
-
 export default studentSchema;
