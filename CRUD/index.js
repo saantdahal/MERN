@@ -12,4 +12,4 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
-app.use("/student", studentRouter);
+app.use("/student", studentRouter); // Anup ley vaneko lado banako rey hai yo
