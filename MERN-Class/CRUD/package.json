@@ -10,9 +10,11 @@
   "author": "Santosh Dahal",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.8.7"
+    "mongoose": "^7.8.7",
+    "nodemailer": "^7.0.2"
   }
 }
