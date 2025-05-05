@@ -12,4 +12,6 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
-app.use("/student", studentRouter); // Anup ley vaneko lado banako rey hai yo
+app.use("/student", studentRouter);
+
+// To start database 'net start mongodb' in cmd
