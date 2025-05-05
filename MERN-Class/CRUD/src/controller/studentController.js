@@ -69,3 +69,20 @@ export const updateStudent = async (req, res, next) => {
     });
   }
 };
+
+//delete student
+export const deleteStudent = async (req, res, next) => {
+  try {
+    let result = await studentModel.findByIdAndDelete(req.params.id);
+    res.status(200).json({
+      success: true,
+      message: "Student deleted successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
