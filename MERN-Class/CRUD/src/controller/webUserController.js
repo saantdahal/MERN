@@ -110,3 +110,21 @@ export const loginWebUser = async (req, res, next) => {
     });
   }
 };
+
+// My Profile Web User
+export const myProfile = async (req, res, next) => {
+  try {
+    let _id = req._id;
+    let result = await WebUserModel.findById(_id);
+    res.status(200).json({
+      success: true,
+      message: "Web User profile fetched successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
