@@ -203,9 +203,9 @@ export const forgotPassword = async (req, res, next) => {
       to: email,
       subject: "Reset Password for Web User Account",
       html: `<h1>Click the link to reset your password</h1><a href="http://localhost:3000/webuser/reset-password?token=${token}">
-
-      http://localhost:3000/webuser/reset-password?token=${token}
       <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Reset Password</button>
+      <br>
+      token=${token}
       </a>`,
     });
     res.status(200).json({
