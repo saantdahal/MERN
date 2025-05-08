@@ -128,3 +128,117 @@ export const myProfile = async (req, res, next) => {
     });
   }
 };
+
+// Update Web User
+export const updateWebUser = async (req, res, next) => {
+  try {
+    let _id = req._id;
+    let data = req.body;
+    delete data.password;
+    delete data.email;
+
+    let result = await WebUserModel.findByIdAndUpdate(_id, data, {
+      new: true,
+    });
+    res.status(200).json({
+      success: true,
+      message: "Profile Updated successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// Update Web User Password
+export const updateWebUserPassword = async (req, res, next) => {
+  try {
+    let oldPassword = req.body.oldPassword;
+    let newPassword = req.body.newPassword;
+    let _id = req._id;
+    let user = await WebUserModel.findById(_id);
+    let isValidPassword = await bcrypt.compare(oldPassword, user.password);
+    if (!isValidPassword) {
+      throw new Error("Wrong Old Password");
+    }
+    let hashedPassword = await bcrypt.hash(newPassword, 10);
+    let result = await WebUserModel.findByIdAndUpdate(
+      _id,
+      { password: hashedPassword },
+      { new: true }
+    );
+    res.status(200).json({
+      success: true,
+      message: "Password updated successfully",
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: ("Failed to update password", error.message),
+    });
+  }
+};
+
+//Forgot password
+export const forgotPassword = async (req, res, next) => {
+  try {
+    let email = req.body.email;
+    let user = await WebUserModel.findOne({
+      email: email,
+    });
+    if (!user) {
+      throw new Error("User not found");
+    }
+    let infoObj = {
+      _id: user._id,
+    };
+    let expiryInfo = {
+      expiresIn: "10m",
+    };
+    let token = await jwt.sign(infoObj, secretKey, expiryInfo);
+    await sendEMail({
+      to: email,
+      subject: "Reset Password for Web User Account",
+      html: `<h1>Click the link to reset your password</h1><a href="http://localhost:3000/webuser/reset-password?token=${token}">
+
+      http://localhost:3000/webuser/reset-password?token=${token}
+      <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Reset Password</button>
+      </a>`,
+    });
+    res.status(200).json({
+      success: true,
+      message: "Reset password link sent to your email",
+      data: user,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+//reset password
+export const resetPassword = async (req, res, next) => {
+  try {
+    let hashedPassword = await bcrypt.hash(req.body.password, 10);
+    let result = await WebUserModel.findByIdAndUpdate(
+      req._id,
+      { password: hashedPassword },
+      { new: true }
+    );
+    res.status(200).json({
+      success: true,
+      message: "Password updated successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
