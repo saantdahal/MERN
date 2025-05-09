@@ -2,9 +2,7 @@
 import nodemailer from "nodemailer";
 
 let transporterInfo = {
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
+  service: "gmail",
   auth: {
     // User and Pass must be genuine
     user: "thesaantdahal@gmail.com",
