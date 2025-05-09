@@ -1,3 +1,4 @@
+// To Connect to MongoDB using Mongoose
 import mongoose from "mongoose";
 
 const connectDatabase = () => {
