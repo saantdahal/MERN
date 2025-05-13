@@ -2,3 +2,12 @@ Image :
      Always place image in public folder
      call the image: src="./background.jpg"
      . in src tag always points the public folder
+
+components:
+        Components are functions. Its first letter must be Capital and its calling just like HTML tag.
+        Components must return only one wrapper(Only one parent element).
+
+        Use {} to perform javascript operation inside tag after return.
+
+        Components are custom tag. Anything that is written inside of components after return are printed on the browser.
+
