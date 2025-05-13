@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import studentRouter from "./src/routes/studentRouter.js";
 import connectDatabase from "./src/connectDB/connectionDatabase.js";
 import webUserRouter from "./src/routes/webUserRouter.js";
+import fileRouter from "./src/routes/fileRouter.js";
 
 dotenv.config();
 const port = process.env.PORT || 3000;
@@ -15,5 +16,4 @@ app.listen(port, () => {
 
 app.use("/student", studentRouter);
 app.use("/webuser", webUserRouter);
-
-// To start database 'net start mongodb' in cmd
+app.use("/file", fileRouter);
