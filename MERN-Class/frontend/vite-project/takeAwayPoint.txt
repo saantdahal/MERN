@@ -1,0 +1,4 @@
+Image :
+     Always place image in public folder
+     call the image: src="./background.jpg"
+     . in src tag always points the public folder
