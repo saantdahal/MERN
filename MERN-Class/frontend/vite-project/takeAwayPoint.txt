@@ -11,3 +11,28 @@ components:
 
         Components are custom tag. Anything that is written inside of components after return are printed on the browser.
 
+Differences between components & Functions are lies when calling{
+function: function()
+component: <function />
+
+}
+
+Routes:
+    http://localhost:3000/student?name=ram&age=50
+
+    url: http://localhost:3000/student?name=ram&age=50
+
+    route: http://localhost:3000/student
+
+    baseurl: http://localhost:3000
+
+    route parameter: /student
+
+    query parameter: name=ram&age=50
+
+
+    Anything before ? is called route
+    anything after ? is called query string or search string
+    here student is called route parameter andd name age is called query parameter
+
+
