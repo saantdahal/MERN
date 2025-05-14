@@ -33,6 +33,6 @@ Routes:
 
     Anything before ? is called route
     anything after ? is called query string or search string
-    here student is called route parameter andd name age is called query parameter
+    here student is called route parameter andd name age is called query
 
 
