@@ -1,4 +1,7 @@
 import "../global.css";
+import SubmitButton from "./components/Button";
+import Button from "./components/Button";
+import LearnForm from "./components/LearnForm";
 import NavLink from "./routes/navLink";
 import Router from "./routes/Router";
 
@@ -8,8 +11,10 @@ function App() {
     <>
       {/* React Fragment */}
 
-      <NavLink />
-      <Router />
+      {/*  <NavLink />
+      <Router /> */}
+      {/* <LearnForm /> */}
+      <SubmitButton />
     </>
   );
 }
