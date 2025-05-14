@@ -13,7 +13,7 @@ function App() {
 
       {/*  <NavLink />
       <Router /> */}
-      {/* <LearnForm /> */}
+      <LearnForm />
       <SubmitButton />
     </>
   );
