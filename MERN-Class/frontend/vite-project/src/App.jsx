@@ -1,9 +1,8 @@
 import "../global.css";
 import SubmitButton from "./components/Button";
-import Button from "./components/Button";
+import LocalStorage from "./components/learn/LocalStorage";
 import LearnForm from "./components/LearnForm";
-import NavLink from "./routes/navLink";
-import Router from "./routes/Router";
+import SessionStorage from "./components/LearnSession/SessionStorage";
 
 function App() {
   // Here we write javascript code
@@ -13,8 +12,10 @@ function App() {
 
       {/*  <NavLink />
       <Router /> */}
-      <LearnForm />
-      <SubmitButton />
+      {/*  <LearnForm />
+      <SubmitButton /> */}
+      {/*  <LocalStorage /> */}
+      <SessionStorage />
     </>
   );
 }

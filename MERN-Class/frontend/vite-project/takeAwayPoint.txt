@@ -36,3 +36,5 @@ Routes:
     here student is called route parameter andd name age is called query
 
 
+
+
