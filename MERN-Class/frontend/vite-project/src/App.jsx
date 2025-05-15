@@ -1,8 +1,6 @@
 import "../global.css";
-import SubmitButton from "./components/Button";
-import LocalStorage from "./components/learn/LocalStorage";
-import LearnForm from "./components/LearnForm";
-import SessionStorage from "./components/LearnSession/SessionStorage";
+import NavLink from "./routes/NavLink";
+import Router from "./routes/Router";
 
 function App() {
   // Here we write javascript code
@@ -10,12 +8,12 @@ function App() {
     <>
       {/* React Fragment */}
 
-      {/*  <NavLink />
-      <Router /> */}
+      <NavLink />
+      <Router />
       {/*  <LearnForm />
       <SubmitButton /> */}
       {/*  <LocalStorage /> */}
-      <SessionStorage />
+      {/*  <SessionStorage /> */}
     </>
   );
 }
