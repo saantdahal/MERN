@@ -35,6 +35,14 @@ Routes:
     anything after ? is called query string or search string
     here student is called route parameter andd name age is called query
 
+Hooks 
+useParams() : to get dynamic route parameter
+useSearchParams() : to get search query parameter
+useNavigate() : to change path on click event.
+
+
+
+
 
 
 
