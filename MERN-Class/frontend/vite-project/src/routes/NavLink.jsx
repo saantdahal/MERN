@@ -7,12 +7,12 @@ const NavLink = () => {
   };
   return (
     <>
-      <Link to="/about" style={cssStyle}>
+      {/*    <Link to="/about" style={cssStyle}>
         About
       </Link>
       <Link to="/contact" style={cssStyle}>
         Contact
-      </Link>
+      </Link> */}
       <Link to="/" style={cssStyle}>
         Home
       </Link>

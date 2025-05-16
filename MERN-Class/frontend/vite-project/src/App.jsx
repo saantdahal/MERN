@@ -1,4 +1,7 @@
 import "../global.css";
+import UseState from "./components/LeranUseState/UseState";
+import { UseState1 } from "./components/LeranUseState/UseState1";
+import UseState2 from "./components/LeranUseState/UseState2";
 import NavLink from "./routes/NavLink";
 import Router from "./routes/Router";
 
@@ -6,10 +9,13 @@ function App() {
   // Here we write javascript code
   return (
     <>
+      {/*     <UseState /> */}
+      {/*  <UseState1 /> */}
+      <UseState2 />
       {/* React Fragment */}
 
-      <NavLink />
-      <Router />
+      {/* <NavLink />
+      <Router /> */}
       {/*  <LearnForm />
       <SubmitButton /> */}
       {/*  <LocalStorage /> */}
