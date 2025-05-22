@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const formContainer = {
   maxWidth: "400px",
@@ -51,11 +52,13 @@ const CreateStudent = () => {
     setEmail("");
     setAddress("");
 
-    console.log(result);
+    //console.log(result.data.message);
+    toast.success(result.data.message);
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <ToastContainer />
       <h1>Student Form</h1>
       <div style={formContainer}>
         <div>
@@ -106,11 +109,9 @@ const CreateStudent = () => {
               setEmail(e.target.value);
             }}
           />
-          z
         </div>
         <br />
         <div>
-          {" "}
           <label htmlFor="address" style={labelStyle}>
             Address:
           </label>

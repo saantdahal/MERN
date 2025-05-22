@@ -4,6 +4,8 @@ import Home from "../components/Home";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import CreateStudent from "../components/Student/CreateStudent";
+import ReadAllStudents from "../components/Student/ReadAllStudents";
+import ReadSpecificStudent from "../components/Student/ReadSpecificStudent";
 
 const MyRoutes = () => {
   return (
@@ -42,7 +44,9 @@ const MyRoutes = () => {
           <Route path="About" element={<About />}></Route>
           <Route path="Contact" element={<Contact />}></Route>
           <Route path="Student" element={<Outlet />}>
+            <Route index element={<ReadAllStudents />}></Route>
             <Route path="Create" element={<CreateStudent />}></Route>
+            <Route path=":id" element={<ReadSpecificStudent />}></Route>
           </Route>
         </Route>
       </Routes>

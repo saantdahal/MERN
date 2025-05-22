@@ -19,6 +19,10 @@ const Navbar = () => {
       <NavLink to={"/student/create"} style={myCss}>
         Create Student
       </NavLink>
+
+      <NavLink to={"/student"} style={myCss}>
+        Read All Students
+      </NavLink>
     </>
   );
 };
